@@ -32,7 +32,7 @@
     padding: 10px;
 }
 
-.timerbar{
+/* .timerbar{
     background-color:black;
     color: #7fff00;
     display: flex;
@@ -42,8 +42,15 @@
     max-width: 10%;
     margin: 10px;
     padding: 10px;
-}
+} */
 
+.timer {
+    display: flex;
+    justify-content: end;
+    flex: wrap;
+    margin-right: 10px;
+    
+}
 
 .choice-container{
     background:rgb(214, 167, 199) ;
@@ -92,15 +99,92 @@
     justify-content: space-between;
 }
 
+/* basic overlap */
+
+h1 {
+    color: #0e1818;
+    margin-bottom: 40px;
+    font-size: 30px;
+}
+
+h2 {
+    margin-bottom: 35px;
+}
 
 
 
+.container {   
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
+    margin: 0%;
+    padding: 10px;
+}
 
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-centre {
+    justify-content: center;
+    align-items: center;
+}
+
+.justify-centre {
+    justify-content: center;
+}
+
+.text-centre {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.btn {
+    font-size: 50px;
+    font-weight: bolder;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    color:#721f10;
+    background: #073763;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    cursor: pointer;
+    box-shadow:0 5px 10px 0 #631515;
+    transition: transform 150ms;
+    transform: scale(1.05);
+}
+
+.btn[disabled]:hover {
+
+}
+
+
+#highscore-btn {
+    background: #e0c215
+}
+
+#highscore-btn:hover {
+    box-shadow:0 5px 10px 0 #631515;
+}
+
+
+/* end basic overlap */
 
 .footer {
     display: flex;
+    flex:wrap;
     flex-direction: column;
-    justify-content: bottom;
+    justify-content: center;
     max-height: 10%;
     max-width: 100%;
     margin: 10px;
@@ -108,9 +192,45 @@
     text-align: center;
 }
 
+/* This is the End page */
 
+.end-form-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 60px;
+    box-shadow: 0 5px 10px 0 var(--words);
+}
 
+input {
+    margin-bottom: 15px;
+    width: 30px;
+    padding: 20px;
+    font-size: 25px;
 
+}
+
+input::placeholder {
+    color: navy;
+}
+
+#username {
+    margin-bottom: 15px;
+    width: 100%;
+    outline: none;
+}
+
+#end-text {
+    font-size: 25px;
+    color: rgb(24, 16, 1);
+    text-align: center;
+}
+
+#saveScoreBtn {
+    border: none;
+
+}
 
 @media screen and (max-width: 992px) { 
     .choice-container{

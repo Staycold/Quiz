@@ -50,7 +50,7 @@ let questions = [
 const scorePoints = 100;
 const maxQestions = 4;
 
-
+// starting the game, getitng a question right away.
 function startGame(){
   questionCounter = 0;
   // score = 0
@@ -81,12 +81,7 @@ getNewQuestion = () => {
 
   acceptingAnswers = true
 }
-
-// function penalty(){
-//   secondsLeft =  secondsLeft-15;
-
-// }
-
+// event on right or wrong answer
 choices.forEach(choice => {
   choice.addEventListener("click", e => {
     e.stopPropagation()
@@ -120,61 +115,13 @@ choices.forEach(choice => {
 
 incrementScore = num => {
   score +=num
-  
+
 }
 
 
 startGame()
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// getting the timer element in the div from the HTML
 var timeEl = document.querySelector(".timer");
 
 
@@ -192,6 +139,7 @@ function setTime() {
     if(secondsLeft <= 0) {      
       clearInterval(timerInterval);      
       sendMessage();
+      return  window.location.assign("/end.html")
     }
 
   }, 1000);
@@ -199,9 +147,8 @@ function setTime() {
 
 function sendMessage() {
     timeEl.textContent = " Time's UP! ";
-    // var imgEl = document.createElement("img");
-    // imgEl.setAttribute("src", "images/image_1.jpg");
-    // mainEl.appendChild(imgEl);
+
+   
   
   }
 
