@@ -30,7 +30,7 @@ let questions = [
   },
   {
     question: "the local specialty dish of the Oaxaca state in Mexico is:",
-    choice1: "Tyluda",
+    choice1: "Tlyuda",
     choice2: "Burrito",
     choice3: "Torta",
     choice4: "Pollo con mole verde",

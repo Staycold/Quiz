@@ -205,9 +205,10 @@ h2 {
 
 input {
     margin-bottom: 15px;
-    width: 30px;
+    width: 60px;
     padding: 20px;
     font-size: 25px;
+    box-shadow: 0 4px 15px 0 #073763;
 
 }
 
