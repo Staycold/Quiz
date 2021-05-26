@@ -3,11 +3,12 @@ const choices = Array.from(document.querySelectorAll(".choice-text"));
 const progressText = document.querySelector("#progessText");
 const scoreText = document.querySelector("#score");
 // const question = document.querySelector("#question");
+var secondsLeft = 60;
 
 
 let currentQuestion = {}
 let acceptingAnswers = true
-let score = 0
+// let score = 0
 let questionCounter = 0
 let availableQuestions = []
 
@@ -47,7 +48,7 @@ let questions = [
 ]
 
 
-const scorePoints = 100;
+
 const maxQestions = 4;
 
 // starting the game, getitng a question right away.
@@ -60,9 +61,9 @@ function startGame(){
 
 getNewQuestion = () => {
   if(availableQuestions.length === 0 || questionCounter > maxQestions){
-  localStorage.setItem("mostRecentScore", score)
+  // localStorage.setItem("mostRecentScore", score)
 
-  return  window.location.assign("/end.html")
+  return  window.location.assign("end.html")
   }
   
   const questionIndex = Math.floor(Math.random() * availableQuestions.length)
@@ -94,7 +95,7 @@ choices.forEach(choice => {
     let classToApply = selectedAnswer == currentQuestion.answer ? "correct" : "incorrect"
 
     if(classToApply === "correct") {
-      incrementScore(scorePoints)
+      // incrementScore(scorePoints)
     }
     else{
       secondsLeft = secondsLeft - 15;
@@ -113,10 +114,14 @@ choices.forEach(choice => {
   })
 })
 
-incrementScore = num => {
-  score +=num
+// function finalscore(){
+//   score = secondsLeft;
+// } 
+// localStorage.setItem("score", secondsLeft)
+// incrementScore = num => {
+//   score +=num
 
-}
+// }
 
 
 startGame()
@@ -129,7 +134,7 @@ var timeEl = document.querySelector(".timer");
 
 // this is the timer
 
-var secondsLeft = 60;
+
 
 function setTime() {
   var timerInterval = setInterval(function() {
@@ -137,7 +142,7 @@ function setTime() {
     timeEl.textContent = "Time remaining: " +secondsLeft;
 
     if(secondsLeft <= 0) {      
-      clearInterval(timerInterval);      
+      // clearInterval(timerInterval);      
       sendMessage();
       return  window.location.assign("/end.html")
     }
