@@ -61,8 +61,8 @@ function startGame(){
 
 getNewQuestion = () => {
   if(availableQuestions.length === 0 || questionCounter > maxQestions){
-  // localStorage.setItem("mostRecentScore", score)
-
+  
+//save score to localstorage
   return  window.location.assign("end.html")
   }
   
@@ -114,14 +114,7 @@ choices.forEach(choice => {
   })
 })
 
-// function finalscore(){
-//   score = secondsLeft;
-// } 
-// localStorage.setItem("score", secondsLeft)
-// incrementScore = num => {
-//   score +=num
 
-// }
 
 
 startGame()
@@ -141,14 +134,45 @@ function setTime() {
     secondsLeft--;
     timeEl.textContent = "Time remaining: " +secondsLeft;
 
-    if(secondsLeft <= 0) {      
-      // clearInterval(timerInterval);      
-      sendMessage();
-      return  window.location.assign("/end.html")
-    }
+    // if(secondsLeft <= 0) {      
+    //   // clearInterval(timerInterval);      
+    //   sendMessage();
+    //   return  window.location.assign("end.html")
+    // }
 
+    //if 
+  //  if(secondsLeft===0){
+  //    clearInterval(timerInterval)
+
+  //     var score=document.querySelector(".score")
+  //     score.setAttribute("style","display:inline;");
+
+  //     var finish=document.querySelector(".finish")
+  //     finish.setAttribute("style","display:inline;");
+      
+
+  //     score.textContent=`my final score is ${secondsLeft}`;
+  //     //save into the local storage
+  //   }
   }, 1000);
 }
+
+
+// enpage
+
+function saveScore(){
+    var score=document.querySelector(".score")
+  score.setAttribute("style","display:inline;");
+  
+  var finish=document.querySelector(".finish")
+  finish.setAttribute("style","display:inline;");
+  
+  
+  score.textContent=`my final score is ${secondsLeft}`;
+  //save into the local storage
+  localStorage.setItem("score",secondsLeft)
+  localStorage.setItem("finalScore", secondsLeft)
+  }
 
 function sendMessage() {
     timeEl.textContent = " Time's UP! ";
