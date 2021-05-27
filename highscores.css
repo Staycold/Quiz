@@ -5,6 +5,7 @@ body {
 #highScoresList {
     list-style: none;
     margin-bottom: 40px;
+    color: darkred;
 }
 
 

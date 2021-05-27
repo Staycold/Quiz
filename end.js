@@ -1,7 +1,8 @@
 var username = document.querySelector("#username")
 var saveSroceBtn = document.querySelector("#saceScoreBtn")
 var finalScore = document.querySelector("#finalScore")
-var mostRcentScore = localstorage.getItem("score")
+// var mostRecentScore = document.querySelector("score")
+var mostRecentScore = localStorage.getItem("mostRecentScore")
 
 var highScores = JSON.parse(localStorage.getItem("highScores")) || []
 

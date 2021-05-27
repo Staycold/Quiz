@@ -61,7 +61,7 @@ function startGame(){
 
 getNewQuestion = () => {
   if(availableQuestions.length === 0 || questionCounter > maxQestions){
-  
+  localStorage.setItem("mostRecentScore", score = secondsLeft)
 //save score to localstorage
   return  window.location.assign("end.html")
   }
@@ -172,6 +172,8 @@ function saveScore(){
   //save into the local storage
   localStorage.setItem("score",secondsLeft)
   localStorage.setItem("finalScore", secondsLeft)
+  localStorage.setItem("mostRecentScore", secondsLeft)
+  localStorage.setItem("mostRecentScore", score = secondsLeft)
   }
 
 function sendMessage() {
