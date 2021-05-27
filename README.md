@@ -10,7 +10,7 @@
   
   <ul>
     
-    <li>GIVEN I am taking a code quiz</li>
+    GIVEN I am taking a code quiz
 <li>WHEN I click the start button
 THEN a timer starts and I am presented with a question</li>
 <li>WHEN I answer a question
@@ -21,5 +21,5 @@ THEN time is subtracted from the clock</li>
 THEN the game is over</li>
 <li>WHEN the game is over
 THEN I can save my initials and my score</li>
-    
-    </h3>
+  </ul>
+</h3>
