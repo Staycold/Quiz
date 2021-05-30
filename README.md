@@ -23,3 +23,8 @@ THEN the game is over</li>
 THEN I can save my initials and my score</li>
   </ul>
 </h3>
+
+
+<p>
+  I'm not sure why the link doesn't work. I'm still new to this. please start with the "start.html"
+  </p>
